@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbling And Capturing</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: hsl(191, 92%, 94%);
+      }
+      .parentDiv {
+        height: 500px;
+        width: 700px;
+        background-color: #48dbfb;
+        border: 10px solid #0abde3;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 13px rgba(0, 0, 0, 0.6);
+      }
+      .childDiv {
+        height: 200px;
+        width: 300px;
+        background-color: #1dd1a1;
+        border: 10px solid black;
+        box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv" /*onclick="parentCall()"*/ id="parentId">
+      <div class="childDiv" /*onclick="childCall()"*/ id="childId"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
